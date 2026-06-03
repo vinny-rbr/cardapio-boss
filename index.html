@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cardápio Boss</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="marca">
+      <span class="selo">Boss Bar</span>
+      <h1>Cardápio Boss</h1>
+      <p>Receitas rápidas para drinks com e sem álcool.</p>
+    </div>
+
+    <section class="painel-controles" aria-label="Filtros do cardápio">
+      <label class="campo-busca" for="pesquisa">
+        <span>Buscar</span>
+        <input type="text" id="pesquisa" placeholder="Pesquisar bebida...">
+      </label>
+
+      <div class="filtros">
+        <button class="ativo" type="button" onclick="filtrar('todos', this)">Todos</button>
+        <button type="button" onclick="filtrar('alcool', this)">Com álcool</button>
+        <button type="button" onclick="filtrar('sem', this)">Sem álcool</button>
+      </div>
+    </section>
+  </header>
+
+  <main id="cardapio" class="grade-cardapio"></main>
+
+  <script src="script.js"></script>
+</body>
+</html>
