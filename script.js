@@ -45,6 +45,11 @@ const bebidas = [
     ingredientes: ["1 dose de gin", "3 doses tônica", "Limão siciliano", "Especiarias", "Gelo"]
   },
   {
+    nome: "Negroni",
+    tipo: "alcool",
+    ingredientes: ["1 dose de gin", "1 dose de Campari", "1 dose de Martini Rosso"]
+  },
+  {
     nome: "Sem Álcool",
     tipo: "sem",
     ingredientes: ["Limão ou tangerina", "Açúcar", "Hortelã", "2 doses de suco", "Gelo"]
