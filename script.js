@@ -74,7 +74,7 @@ function mostrar(lista) {
   if (!lista.length) {
     cardapio.innerHTML = `
       <div class="vazio">
-        <div class="vazio-ornamento">❖</div>
+        <div class="vazio-ornamento">★</div>
         <div class="vazio-titulo">Nada por aqui</div>
         <div class="vazio-dica">Tente outro nome ou ingrediente.</div>
       </div>
