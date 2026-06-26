@@ -2,22 +2,17 @@ const bebidas = [
   {
     nome: "Caipirinha",
     tipo: "alcool",
-    ingredientes: ["3 pedaços de limão", "3 colheres de açúcar", "1 dose de cachaça", "Gelo"]
+    ingredientes: ["Meia dose de suco de limão", "3 colheres de açúcar", "1 dose de cachaça", "Gelo", "Rodelas de limão"]
   },
   {
     nome: "Caipirinha Gourmet",
     tipo: "alcool",
-    ingredientes: ["3 pedaços de limão", "1 colher de açúcar", "Meia dose de gengibre", "1 dose de cachaça", "Gelo"]
+    ingredientes: ["Meia dose de suco de limão", "1 colher de açúcar", "Meia dose de gengibre", "1 dose de cachaça", "Gelo", "Rodelas de limão"]
   },
   {
     nome: "Caipirosca",
     tipo: "alcool",
-    ingredientes: ["3 pedaços de limão ou fruta escolhida", "Açúcar", "1 dose de vodka", "Gelo"]
-  },
-  {
-    nome: "Mojito",
-    tipo: "alcool",
-    ingredientes: ["3 pedaços de limão", "3 colheres de açúcar", "Hortelã", "Rum/Vodka", "Meia dose de soda", "Gelo"]
+    ingredientes: ["Meia dose de suco de limão", "3 colheres de açúcar", "1 dose de vodka", "Gelo", "Rodelas de limão"]
   },
   {
     nome: "Sensação",
@@ -27,47 +22,27 @@ const bebidas = [
   {
     nome: "Savana",
     tipo: "alcool",
-    ingredientes: ["2 doses de licor de maracujá", "10ml suco de limão", "Gelo", "Espuma"]
-  },
-  {
-    nome: "Tucuju",
-    tipo: "alcool",
-    ingredientes: ["1 dose licor de gengibre", "Meia dose de suco de limão", "1 dose de soda", "Gelo"]
+    ingredientes: ["2 doses de licor de maracujá", "10 ml suco de limão (menos de meia dose)", "Gelo", "Finaliza com espuma"]
   },
   {
     nome: "Gin Tropical/Red",
     tipo: "alcool",
-    ingredientes: ["1 dose de gin", "3 doses energético", "Laranja", "Gelo"]
+    ingredientes: ["Gelo no copo", "1 dose de gin", "3 doses de energético", "1 fatia de laranja (decoração)"]
   },
   {
     nome: "Gin Tônica",
     tipo: "alcool",
-    ingredientes: ["1 dose de gin", "3 doses tônica", "Limão siciliano", "Especiarias", "Gelo"]
+    ingredientes: ["Gelo no copo", "1 dose de gin", "3 doses de tônica", "Rodela de siciliano ou laranja", "Especiarias em cima"]
   },
   {
-    nome: "Negroni",
-    tipo: "alcool",
-    ingredientes: ["1 dose de gin", "1 dose de Campari", "1 dose de Martini Rosso", "Finalizado com rodela de laranja ou limão siciliano"]
-  },
-  {
-    nome: "Fitzgerald",
-    tipo: "alcool",
-    ingredientes: ["1 dose de gin", "Meia dose de xarope de açúcar", "Meia dose de suco de limão", "Finaliza com rodela de limão siciliano"]
-  },
-  {
-    nome: "Aperol",
-    tipo: "alcool",
-    ingredientes: ["Gelo no copo", "Meia rodela de laranja dentro do copo", "1 dose de Aperol", "3 doses de espumante", "2 doses de água com gás"]
-  },
-  {
-    nome: "Sem Álcool",
+    nome: "Sem Álcool de Limão",
     tipo: "sem",
-    ingredientes: ["Limão ou tangerina", "Açúcar", "Hortelã", "2 doses de suco", "Gelo"]
+    ingredientes: ["Meia dose de suco de limão", "3 colheres de açúcar", "Hortelã", "2 doses de suco", "Gelo"]
   },
   {
-    nome: "Sem Álcool de Xarope",
+    nome: "Sem Álcool de Xarope de Frutas Vermelhas",
     tipo: "sem",
-    ingredientes: ["Xarope frutas vermelhas", "Suco de limão", "Soda", "Gelo"]
+    ingredientes: ["Meia dose de xarope de frutas vermelhas", "Meia dose de suco de limão", "1 dose de soda", "Gelo"]
   }
 ];
 
