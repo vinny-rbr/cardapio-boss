@@ -48,6 +48,7 @@ const bebidas = [
 
 const cardapio = document.getElementById("cardapio");
 const pesquisa = document.getElementById("pesquisa");
+const contagem = document.getElementById("contagem");
 let filtroAtual = "todos";
 
 function normalizar(texto) {
@@ -59,29 +60,41 @@ function bebidasFiltradas() {
 
   return bebidas.filter((bebida) => {
     const combinaFiltro = filtroAtual === "todos" || bebida.tipo === filtroAtual;
-    const combinaBusca = normalizar(bebida.nome).includes(termo);
+    const combinaBusca =
+      !termo ||
+      normalizar(bebida.nome).includes(termo) ||
+      bebida.ingredientes.some((ingrediente) => normalizar(ingrediente).includes(termo));
     return combinaFiltro && combinaBusca;
   });
 }
 
 function mostrar(lista) {
+  contagem.textContent = `${lista.length} ${lista.length === 1 ? "drink" : "drinks"} no cardápio`;
+
   if (!lista.length) {
-    cardapio.innerHTML = '<p class="vazio">Nenhuma bebida encontrada.</p>';
+    cardapio.innerHTML = `
+      <div class="vazio">
+        <div class="vazio-ornamento">❖</div>
+        <div class="vazio-titulo">Nada por aqui</div>
+        <div class="vazio-dica">Tente outro nome ou ingrediente.</div>
+      </div>
+    `;
     return;
   }
 
   cardapio.innerHTML = lista.map((bebida) => {
-    const rotulo = bebida.tipo === "alcool" ? "Com álcool" : "Sem álcool";
+    const semAlcool = bebida.tipo === "sem";
+    const rotulo = semAlcool ? "ZERO" : "ÁLCOOL";
+    const classeRotulo = semAlcool ? "rotulo sem" : "rotulo";
 
     return `
-      <article class="card ${bebida.tipo}">
-        <div class="card-cabecalho">
-          <h2>${bebida.nome}</h2>
-          <span class="tag">${rotulo}</span>
+      <article class="item">
+        <div class="item-topo">
+          <span class="nome">${bebida.nome}</span>
+          <span class="leader"></span>
+          <span class="${classeRotulo}">${rotulo}<span class="ponto"></span></span>
         </div>
-        <ul>
-          ${bebida.ingredientes.map((ingrediente) => `<li>${ingrediente}</li>`).join("")}
-        </ul>
+        <p class="ingredientes">${bebida.ingredientes.join(", ")}</p>
       </article>
     `;
   }).join("");
@@ -99,4 +112,4 @@ function filtrar(tipo, botao) {
 }
 
 pesquisa.addEventListener("input", atualizarCardapio);
-mostrar(bebidas);
+atualizarCardapio();

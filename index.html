@@ -6,21 +6,30 @@
   <title>Cardápio Boss</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="topo">
-    <div class="marca">
-      <span class="selo">Boss Bar</span>
-      <h1>Cardápio Boss</h1>
-      <p>Receitas rápidas para drinks com e sem álcool.</p>
-    </div>
+  <div class="pagina">
+    <div class="moldura">
+      <span class="canto canto-tl"></span>
+      <span class="canto canto-tr"></span>
+      <span class="canto canto-bl"></span>
+      <span class="canto canto-br"></span>
 
-    <section class="painel-controles" aria-label="Filtros do cardápio">
-      <label class="campo-busca" for="pesquisa">
-        <span>Buscar</span>
-        <input type="text" id="pesquisa" placeholder="Pesquisar bebida...">
+      <header class="cabecalho">
+        <div class="ornamento">❖ ❖ ❖</div>
+        <h1>Cardápio<br>Boss</h1>
+        <div class="subtitulo">BOSS BAR · SPEAKEASY</div>
+        <p class="lema">Receitas de drinks, com e sem álcool — feitas pra mandar bem no balcão.</p>
+      </header>
+
+      <label class="busca">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#d9b25b" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle>
+          <line x1="21" y1="21" x2="16.5" y2="16.5"></line>
+        </svg>
+        <input type="text" id="pesquisa" placeholder="Buscar drink ou ingrediente…">
       </label>
 
       <div class="filtros">
@@ -28,10 +37,13 @@
         <button type="button" onclick="filtrar('alcool', this)">Com álcool</button>
         <button type="button" onclick="filtrar('sem', this)">Sem álcool</button>
       </div>
-    </section>
-  </header>
+      <div class="contagem" id="contagem"></div>
 
-  <main id="cardapio" class="grade-cardapio"></main>
+      <main id="cardapio" class="lista"></main>
+
+      <div class="ornamento rodape">❖ ❖ ❖</div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
